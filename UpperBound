@@ -1,0 +1,24 @@
+public class UpperBound {
+    public static int upperBound(int[] arr, int target) {
+        int left = 0, right = arr.length;
+        
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            
+            if (arr[mid] <= target) { // Move right if arr[mid] is ≤ target
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return left; // Position of the upper bound
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 4, 4, 5, 6, 8, 10};
+        int target = 4;
+        
+        int index = upperBound(arr, target);
+        System.out.println("Upper Bound index: " + index);
+    }
+}
