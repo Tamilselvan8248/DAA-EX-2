@@ -1,0 +1,62 @@
+public class CountOccurrences {
+    // Function to find the first occurrence of target
+    public static int findFirstOccurrence(int[] arr, int target) {
+        int low = 0, high = arr.length - 1;
+        int first = -1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            if (arr[mid] == target) { 
+                first = mid;  // Possible first occurrence found
+                high = mid - 1; // Move left
+            } 
+            else if (arr[mid] < target) {
+                low = mid + 1; // Move right
+            } 
+            else {
+                high = mid - 1; // Move left
+            }
+        }
+        return first;
+    }
+
+    // Function to find the last occurrence of target
+    public static int findLastOccurrence(int[] arr, int target) {
+        int low = 0, high = arr.length - 1;
+        int last = -1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            if (arr[mid] == target) { 
+                last = mid;  // Possible last occurrence found
+                low = mid + 1; // Move right
+            } 
+            else if (arr[mid] < target) {
+                low = mid + 1; // Move right
+            } 
+            else {
+                high = mid - 1; // Move left
+            }
+        }
+        return last;
+    }
+
+    // Function to count occurrences
+    public static int countOccurrences(int[] arr, int target) {
+        int first = findFirstOccurrence(arr, target);
+        if (first == -1) return 0; // Target not found
+
+        int last = findLastOccurrence(arr, target);
+        return (last - first + 1);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 4, 4, 4, 5, 6, 8, 10}; // Sorted array
+        int target = 4;
+
+        int count = countOccurrences(arr, target);
+        System.out.println("Count of " + target + ": " + count);
+    }
+}
