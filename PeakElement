@@ -11,7 +11,7 @@ public class PeakElement {
                 low = mid + 1; 
             }
         }
-        return low; // Peak index
+        return low; 
     }
 
     public static void main(String[] args) {
