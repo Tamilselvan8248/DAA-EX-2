@@ -5,13 +5,13 @@ public class UpperBound {
         while (low < high) {
             int mid = low + (high - low) / 2;
 
-            if (arr[mid] <= target) { // Move low to mid + 1 if arr[mid] is ≤ target
+            if (arr[mid] <= target) { 
                 low = mid + 1;
             } else {
                 high = mid;
             }
         }
-        return low; // Position of the upper bound
+        return low; 
     }
 
     public static void main(String[] args) {
