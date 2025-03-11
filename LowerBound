@@ -8,11 +8,11 @@ class LowerBound {
             if (arr[mid] < target) {
                 left = mid + 1;
             } else {
-                right = mid; // Move left to find the first greater/equal element
+                right = mid; 
             }
         }
 
-        return left; // The index of the lower bound
+        return left; 
     }
 
     public static void main(String[] args) {
