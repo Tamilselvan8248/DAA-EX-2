@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class PrintReverseRecursively {
     public static void printNumbers(int n) {
         if (n < 1) {
-            return; // Base condition to stop recursion
+            return;
         }
         System.out.println(n);
-        printNumbers(n - 1); // Recursive call with decremented value
+        printNumbers(n - 1); 
     }
 
     public static void main(String[] args) {
@@ -15,6 +15,6 @@ public class PrintReverseRecursively {
         int n = scanner.nextInt();
         scanner.close();
 
-        printNumbers(n); // Start recursion from N to 1
+        printNumbers(n); 
     }
 }
