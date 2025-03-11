@@ -6,16 +6,16 @@ public class PeakElement {
             int mid = low + (high - low) / 2;
 
             if (arr[mid] > arr[mid + 1]) {
-                high = mid; // Peak is on the left or mid
+                high = mid; 
             } else {
-                low = mid + 1; // Peak is on the right
+                low = mid + 1; 
             }
         }
         return low; // Peak index
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 1}; // Example array
+        int[] arr = {1, 2, 3, 1}; 
         int peakIndex = findPeakElement();
         System.out.println("Peak element is at index: " + peakIndex + ", value: " + arr[peakIndex]);
     }
