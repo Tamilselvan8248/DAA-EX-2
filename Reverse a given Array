@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class ReverseArrayRecursion {
     public static void reverseArray(int[] arr, int start, int end) {
         if (start >= end) {
-            return; // Base condition: Stop when pointers meet or cross
+            return; 
         }
-        // Swap elements at start and end
+        
         int temp = arr[start];
         arr[start] = arr[end];
         arr[end] = temp;
 
-        // Recursive call with updated indices
+        
         reverseArray(arr, start + 1, end - 1);
     }
 
@@ -26,7 +26,7 @@ public class ReverseArrayRecursion {
         }
         scanner.close();
 
-        reverseArray(arr, 0, n - 1); // Call the recursive function
+        reverseArray(arr, 0, n - 1); 
 
         System.out.println("Reversed array:");
         for (int num : arr) {
