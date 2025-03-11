@@ -1,15 +1,14 @@
 public class SumOfSubsets {
-    public static void findSubsetSums(int[] arr, int index, int currentSum) {
-        // Base case: If we reach the end, print the sum
+    public static void findSubsetSums(int[] arr, int index, int currentSum) 
         if (index == arr.length) {
             System.out.println(currentSum);
             return;
         }
 
-        // Include the current element
+     
         findSubsetSums(arr, index + 1, currentSum + arr[index]);
 
-        // Exclude the current element
+        
         findSubsetSums(arr, index + 1, currentSum);
     }
 
