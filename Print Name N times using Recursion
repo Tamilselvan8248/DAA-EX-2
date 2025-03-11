@@ -6,7 +6,7 @@ public class PrintNameRecursively {
             return;
         }
         System.out.println(name);
-        printName(name, n - 1); // Recursive call
+        printName(name, n - 1); 
     }
 
     public static void main(String[] args) {
@@ -17,6 +17,6 @@ public class PrintNameRecursively {
         int n = scanner.nextInt();
         scanner.close();
 
-        printName(name, n); // Call the recursive function
+        printName(name, n);
     }
 }
