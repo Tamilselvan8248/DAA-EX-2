@@ -3,18 +3,16 @@ import java.util.Scanner;
 public class PrintNumbersRecursively {
     public static void printNumbers(int current, int n) {
         if (current > n) {
-            return; // Base condition to stop recursion
+            return; 
         }
         System.out.println(current);
-        printNumbers(current + 1, n); // Recursive call with incremented value
-    }
-
+        printNumbers(current + 1, n); 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the value of N: ");
         int n = scanner.nextInt();
         scanner.close();
 
-        printNumbers(1, n); // Start recursion from 1 to N
+        printNumbers(1, n); 
     }
 }
